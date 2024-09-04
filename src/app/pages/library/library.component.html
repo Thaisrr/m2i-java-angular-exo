@@ -1,0 +1,14 @@
+<h1>Librairie</h1>
+
+<div class="container">
+  @for (book of books; track book.id) {
+    <div class="card">
+      <h2>
+        <span [ngClass]="{'underline': book.isRead}">{{book.title}}</span>  {{book.isRead | thumb}}</h2>
+      <p>-- {{book.author}}</p>
+      <button (click)="toggleIsRead(book)">
+        {{book.isRead ? 'vu' : 'pas vu'}}
+      </button>
+    </div>
+  }
+</div>
