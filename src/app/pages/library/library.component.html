@@ -12,3 +12,25 @@
     </div>
   }
 </div>
+
+<h2>Ajouter un livre</h2>
+
+<form (ngSubmit)="submitNewBook()">
+  <p>
+    <label for="title">Titre</label>
+    <input id="title" name="title" [(ngModel)]="newBook.title">
+    @if(titleHasError) {
+      <small class="error">Veuillez entrer un titre</small>
+    }
+  </p>
+  <p>
+    <label for="author">Auteur.trice</label>
+    <input id="author" name="author" [(ngModel)]="newBook.author"/>
+    @if (authorHasError) {
+      <small class="error">Veuillez entrer un.e auteur.trice</small>
+    }
+  </p>
+  <p>
+    <button>Enregistrer</button>
+  </p>
+</form>
