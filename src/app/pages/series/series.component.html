@@ -1,14 +1,15 @@
 <h1>Mes séries</h1>
 
+<div class="btn-container">
+  <button class="secondary" (click)="setOrder('asc')">ASC</button>
+  <button class="secondary" (click)="setOrder('desc')">DESC</button>
+</div>
 <ul>
   @for (serie of series | sort: order; track serie; let i = $index) {
     <li>{{serie}}
-      <button (click)="removeSerie(i)">Delete</button>
+      <button class="secondary" (click)="removeSerie(i)">🗑️</button>
     </li>
   } @empty {
     <p>Aucune série en cours</p>
   }
 </ul>
-
-<button (click)="setOrder('asc')">ASC</button>
-<button (click)="setOrder('desc')">DESC</button>

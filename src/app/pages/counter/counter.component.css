@@ -5,3 +5,23 @@
 .green {
   color: green;
 }
+
+.counter {
+  width: 50%;
+  min-width: 300px;
+  box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.53);
+  border-radius: 10px 10px 10px 30px;
+  margin: 100px auto;
+  text-align: center;
+  padding: 50px;
+}
+
+.counter p:first-child {
+  font-size: 3em;
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
