@@ -4,13 +4,15 @@ import { Component } from '@angular/core';
 import {NgOptimizedImage} from "@angular/common";
 import {FormArray, FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {Pokemon} from "../../utils/types/pokemon.type";
+import {PokemonCardComponent} from "../../components/pokemon-card/pokemon-card.component";
 
 @Component({
   selector: 'app-pokemon',
   standalone: true,
   imports: [
     NgOptimizedImage,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PokemonCardComponent
   ],
   templateUrl: './pokemon.component.html',
   styleUrl: './pokemon.component.css'

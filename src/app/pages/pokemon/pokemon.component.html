@@ -65,28 +65,7 @@
   <h2>Mes pokemons</h2>
   <div class="grid">
     @for (poke of pokemons; track poke) {
-      <article class="card">
-        <h2>{{poke.name}}</h2>
-        <p>{{poke.description}}</p>
-
-        <h4>Types : </h4>
-        <div class="types">
-          @for (type of poke.types; track type) {
-            <span class="rounded">{{type}}</span>
-          }
-        </div>
-
-        <h4>Zone</h4>
-        <p><b>{{poke.zone.name}} : {{poke.zone.description}}</b></p>
-
-        <h4>Attaques</h4>
-        <ul class="attacks">
-          @for (att of poke.attacks; track att) {
-            <li>{{att.name}} --> {{att.power}}</li>
-          }
-        </ul>
-      </article>
-
+      <app-pokemon-card [pokemon]="poke"></app-pokemon-card>
     } @empty {
       <p>Aucun pokemon pour le moment</p>
     }

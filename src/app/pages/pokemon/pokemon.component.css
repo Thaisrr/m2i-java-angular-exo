@@ -25,11 +25,7 @@ form {
   margin: 80px auto;
 }
 
-.card {
-  border-radius: 10px 10px 10px 20px;
-  box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.56);
-  padding: 20px;
-}
+
 
 .grid {
   display: grid;
@@ -37,6 +33,3 @@ form {
   gap: 30px;
 }
 
-.rounded {
-  margin-right: 10px;
-}
