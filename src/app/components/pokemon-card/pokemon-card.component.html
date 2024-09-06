@@ -18,4 +18,17 @@
       <li>{{att.name}} --> {{att.power}}</li>
     }
   </ul>
+  @if(view === 'global') {
+    <p>
+      <button (click)="addToPokedex()">Ajouter au Pokédex</button>
+    </p>
+    <p>
+      <button class="secondary" (click)="deletePokemon()">Delete</button>
+    </p>
+  } @else {
+    <p>
+      <button class="secondary" (click)="deleteFromPokedex()">Supprimer du pokédex</button>
+    </p>
+  }
+
 </article>

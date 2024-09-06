@@ -1,0 +1,7 @@
+<h1>Pokédex</h1>
+
+<div class="grid">
+  @for (p of pokedex; track p) {
+    <app-pokemon-card [pokemon]="p" view="pokedex"></app-pokemon-card>
+  }
+</div>

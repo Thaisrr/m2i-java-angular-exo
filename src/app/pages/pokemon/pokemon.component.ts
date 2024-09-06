@@ -74,4 +74,10 @@ export class PokemonComponent {
     this.pokeForm.reset();
   }
 
+  deletePokemon(pokemon: Pokemon) {
+    const i = this.pokemons.indexOf(pokemon);
+    this.pokemons.splice(i, 1);
+    localStorage.setItem('pokemons', JSON.stringify(this.pokemons));
+  }
+
 }

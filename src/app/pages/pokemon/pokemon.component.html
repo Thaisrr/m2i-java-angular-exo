@@ -65,7 +65,7 @@
   <h2>Mes pokemons</h2>
   <div class="grid">
     @for (poke of pokemons; track poke) {
-      <app-pokemon-card [pokemon]="poke"></app-pokemon-card>
+      <app-pokemon-card [pokemon]="poke" (deleteEvent)="deletePokemon($event)"></app-pokemon-card>
     } @empty {
       <p>Aucun pokemon pour le moment</p>
     }
