@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.card {
+  position: relative;
+  width: 500px;
+  font-size: 1.5em;
+  text-align: center;
+}
+.card:after {
+  content: "";
+  background-image: linear-gradient(to right top, #9e55cd, #ff3d99, #FF684e, #fdaf00, #a8eb12);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(100px);
+  animation: spin 10s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+button {
+  background-color: #344055;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: .7em;
+}
